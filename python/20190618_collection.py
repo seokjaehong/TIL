@@ -59,4 +59,11 @@ print(c4)
 c3.subtract(c4)
 print(c3)
 
+# 8.and/or
+import collections
+a = collections.Counter('aabbccdd')
+b = collections.Counter('aabbbce')
+print(a & b)
+print(a | b)
+
 
