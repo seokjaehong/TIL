@@ -84,6 +84,6 @@ time_diff = (time.time() - start_time)
 print('#4-1 end', time_diff)
 
 start_time = time.time()
-d = check_prime_part5(n)
+e = check_prime_part5(n)
 time_diff = (time.time() - start_time)
 print('#5-1 end', time_diff)
