@@ -1,0 +1,117 @@
+/* 03 기본선택자 */
+/* 03.1. 전체 선택자(*) */
+/* 활용도가 낮음  */
+* {
+    color: red;
+}
+
+/* 03.2.요소 or 태그 선택자(E) */
+/* div, img , span, table 이런 것들, 단독으로 사용하는것 들은 활용도가 낮음  */
+li {
+    color: rosybrown;
+}
+/* 03.3.클래스 선택자 (.E)
+요소의 별명이라고 보면 됨,여러곳에 사용됨, 활용도가 높음   
+*/
+
+.orange{
+    color: springgreen;
+}
+/* 03.4 ID 선택자(#E)  ID는 고유한 값
+*/
+
+#orange {
+    color: yellow;
+}
+
+/* 04.복합선택자 */
+/* 04.1 일치선택자(EF) : and조건으로 모두 해당되는 요소를 골라줌  */
+span.apple {
+    font-size: 20;
+    color: thistle;
+}
+/* 04.2 자식선택자(E > F) : 부모를 기준으로 특정한 자식 요소를 찾는다. */
+ul > .orange#orange {
+    color: brown;
+}
+/* 04.3 후손 or 자손or 하위선택자 (E F) */
+div .strawberry{
+    color: slategray;
+}
+/* 04.4 인접 or 형제 선택자 (E+F) 
+F를 찾는것임 그러니까 .orange 다음에 있는 li 를 찾는것임  */
+.orange+li{
+    color: teal;
+}
+/* 04.5 인접형제선택자 (E~F) */
+/* E의 다음형제들 F 모두를 선택하는것  */
+.orange+li{
+    color: tomato;
+}
+
+/* 05 가상클래스 선택자 */
+/* :<- 가상클래스 선택자, ::<- 가상요소 선택자 */
+/* 05.1 Hover(E:hover) */
+/*  */
+a:hover{
+    font-size: 20px;
+    font-weight: bold;
+}
+.box{
+    background-color: tomato;
+    transition: 0.4s;
+    width: 100px;
+    height: 100px;
+}
+.box:hover{
+    width: 200px;
+    height: 200px;
+
+}
+
+/* 05.2 active (E:active) */
+/* 클릭하는 동안에 어떻게할지를 결정해줌  */
+
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    transition: 0.4s;
+}
+.box2:active{
+    width: 150px;
+    background-color: yellowgreen;
+
+}
+/* 05.3 focus (E:focus) */
+/* focus 되는동안 , 대화형컨텐츠에서만 사용가능( input,img, tabindex) */
+.box3{
+    width: 100px;
+    outline: none;
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+.box3:focus{
+    border-color: red;
+    width: 150px;
+
+}
+
+/* 06 가상클래스 선택자  */
+/* 06.1  E:first-child 형제요소중에 첫번째 요소라면 선택 , E:last-child 형제요소중에 마지막요소라면 선택 */
+.fruits li:first-child{
+    color: blue;
+}
+
+.fruits li:last-child{
+    color: blue;
+}
+
+/* 07 가상클래스 선택자 */
+/* 07.1 E:nth-child() */
+/*  n은 늘어나는 숫자를 생각하면된다  */
+.fruits li:nth-child(2n-1){
+    color: red;
+    font-size: 30px;
+}
