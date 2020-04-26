@@ -1,0 +1,30 @@
+.fruits {
+    font-size: 40px;
+}
+/* .fruits p:nth-child(2) {
+    color: red;
+} */
+
+.fruits p:nth-of-type(1){
+    color: orange;
+}
+
+.fruits2{
+    font-size: 40px;
+}
+
+.fruits .red :nth-of-type(1) {
+    color: red;
+}
+/* :nth-last-of-type() 는 tag를 찾는개념으로서만 사용하는게 좋다 */
+
+/* 09.1 not(E:not(S)) : S가 아닌 E를 선택  */
+
+
+.fruits3 {
+    font-size: 40px;
+}
+
+.fruits3 li:not(.strawberry) {
+    color: red;
+}
