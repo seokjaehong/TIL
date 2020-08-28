@@ -19,7 +19,7 @@ d_frozen = MappingProxyType(d)
 print(d, id(d))
 print(d_frozen, id(d_frozen))
 
-# 수정불가
+# 수정불가, d
 
 # d_frozen['key2'] = 0
 # print(d_frozen)
